@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Felipe Torres</title>
+  <meta name="description" content="Felipe Torres’ portfolio — video editor and aspiring web developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+  <!-- ====== Header / Navbar ====== -->
+  <header class="navbar" role="banner">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Home">FT</a>
+      <button class="burger" aria-label="Open/close navigation" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education-experience">Education & Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#tools">Tools & Frameworks</a>
+        <a href="#contact">Contact</a>
+        <a href="index.html" lang="pt" hreflang="pt" class="lang-link">
+  Português BR <img src="https://flagcdn.com/br.svg" alt="Brazil Flag" class="flag">
+</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====== About ====== -->
+    <section id="about" class="section">
+      <div class="container about">
+        <img class="avatar" src="imgs/img1.jpg" alt="Felipe Torres' photo" />
+        <div class="about-text">
+          <h1>Hi, I'm <span class="accent">Felipe Torres</span> 👋</h1>
+          <p>
+            I'm a <strong>video editor</strong> and a <strong>web development</strong> student.
+            I love turning ideas into visual products and clean, fast, accessible web experiences.
+            Here you'll find my background, projects and the tools I use.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="assets/curriculo-felipe-torres-en.pdf" download>Download Resume (EN)</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Education & Experience ====== -->
+    <section id="education-experience" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Education & Experience</h2>
+        <div class="cards-2col">
+          <article class="card">
+            <h3>Education</h3>
+            <ul class="list">
+              <li><strong>Computer Programming</strong> — bachelor's (in progress)</li>
+              <li>Front‑end short courses (HTML, CSS, JavaScript)</li>
+              <li>Motion and Post‑production workshops</li>
+            </ul>
+          </article>
+
+          <div class="divider-symbol" aria-hidden="true">𒊹</div>
+
+          <article class="card">
+            <h3>Experience</h3>
+            <ul class="list">
+              <li><strong>Video Editor</strong> — 2017&nbsp;→&nbsp;present</li>
+              <li>Freelance landing pages & portfolios</li>
+              <li>Content creation for social media</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Projects (Carousel) ====== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="carousel" aria-roledescription="carousel">
+          <button class="control prev" aria-label="Previous project" data-dir="prev">‹</button>
+          <div class="viewport">
+            <div class="track" id="carousel-track">
+              <!-- Slides are injected by script.js -->
+            </div>
+          </div>
+          <button class="control next" aria-label="Next project" data-dir="next">›</button>
+        </div>
+        <p class="hint">* The carousel auto-advances every 3 seconds. Hover to pause.</p>
+      </div>
+    </section>
+
+    <!-- ====== Tools & Frameworks ====== -->
+    <section id="tools" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Tools & Frameworks</h2>
+
+        <div class="tools-grid">
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">HTML5</div>
+            <div class="tool-years">2+ years</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">CSS3</div>
+            <div class="tool-years">2+ years</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">JavaScript</div>
+            <div class="tool-years">2+ years</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-java-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">Java</div>
+            <div class="tool-years">1+ year</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-bootstrap-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">Bootstrap</div>
+            <div class="tool-years">1+ year</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-laravel-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">Laravel</div>
+            <div class="tool-years">1+ year</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">MySQL</div>
+            <div class="tool-years">1+ year</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-git-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">Git</div>
+            <div class="tool-years">3+ years</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-figma-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">Figma</div>
+            <div class="tool-years">2+ years</div>
+          </div>
+          <div class="tool-card" tabindex="0">
+            <i class="devicon-premierepro-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">Premiere Pro</div>
+            <div class="tool-years">5+ years</div>
+          </div>
+        </div>
+        <p class="hint">Tip: hover or focus a card to see the effect ✨</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== Footer / Contact ====== -->
+  <footer id="contact" class="footer">
+    <div class="container footer-inner">
+      <div class="footer-actions">
+        <a class="btn primary" href="assets/curriculo-felipe-torres-en.pdf" download>Download Resume (EN)</a>
+      </div>
+
+      <div class="contact">
+        <a href="mailto:felipe@email.com" class="contact-item" aria-label="E-mail">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v.4l-10 6.25L2 6.4V6zm0 3.86V18a2 2 0 002 2h16a2 2 0 002-2V9.86l-9.39 5.86a2 2 0 01-2.22 0L2 9.86z"/></svg>
+          <span>felipe@email.com</span>
+        </a>
+        <a href="https://instagram.com/seu_instagram" target="_blank" rel="noopener" class="contact-item" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zM17.8 6a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+          <span>@seu_instagram</span>
+        </a>
+        <a href="https://www.linkedin.com/in/seu_linkedin" target="_blank" rel="noopener" class="contact-item" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 102.5 6a2.5 2.5 0 002.48-2.5zM3 8h4v13H3zM9 8h3.8v1.8h.06A4.18 4.18 0 0117.6 8c3.6 0 4.4 2.2 4.4 5v8h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.39 0-2.76 1.9-2.76 3.8V21H9z"/></svg>
+          <span>Felipe Torres</span>
+        </a>
+        <a href="https://github.com/seu_github" target="_blank" rel="noopener" class="contact-item" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.75-1.34-1.75-1.1-.75.08-.74.08-.74 1.21.08 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.96 0-1.31.47-2.38 1.25-3.22-.13-.31-.54-1.55.12-3.23 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 016.01 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.68.25 2.92.12 3.23.78.84 1.25 1.91 1.25 3.22 0 4.63-2.81 5.66-5.49 5.96.43.37.82 1.09.82 2.2v3.26c0 .32.22.69.83.58A12 12 0 0012 .5z"/></svg>
+          <span>@seu_github</span>
+        </a>
+      </div>
+    </div> 
+      
+    
+    <div class="copy">© 2025 Developed by Felipe Torres</div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">⭡</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

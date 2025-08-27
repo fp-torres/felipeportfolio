@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- fundo -->
+  <rect width="64" height="64" rx="12" ry="12" fill="#0f172a"></rect>
+  <!-- chip central -->
+  <rect x="16" y="16" width="32" height="32" rx="4" ry="4" fill="#ffd100"></rect>
+  <!-- linhas de circuito -->
+  <line x1="32" y1="0" x2="32" y2="16" stroke="#ffd100" stroke-width="2"></line>
+  <line x1="32" y1="48" x2="32" y2="64" stroke="#ffd100" stroke-width="2"></line>
+  <line x1="0" y1="32" x2="16" y2="32" stroke="#ffd100" stroke-width="2"></line>
+  <line x1="48" y1="32" x2="64" y2="32" stroke="#ffd100" stroke-width="2"></line>
+  <!-- cantos -->
+  <circle cx="12" cy="12" r="2" fill="#ffd100"></circle>
+  <circle cx="52" cy="12" r="2" fill="#ffd100"></circle>
+  <circle cx="12" cy="52" r="2" fill="#ffd100"></circle>
+  <circle cx="52" cy="52" r="2" fill="#ffd100"></circle>
+</svg>
