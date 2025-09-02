@@ -97,16 +97,8 @@ const prevBtn = document.querySelector('.control.prev');
 const nextBtn = document.querySelector('.control.next');
 
 if (track) {
-  track.innerHTML = projects.map(p => `
-    <article class="slide">
-      <img src="${p.image}" alt="${p.title}" />
-      <div class="slide-footer">
-        <div class="title">${p.title}</div>
-        <a class="btn primary" href="${p.github}" target="_blank" rel="noopener">${ctaText}</a>
-      </div>
-    </article>
-  `).join('');
-}
+  
+
 track.innerHTML = projects.map(p => `
   <article class="slide">
     <img src="${p.image}" alt="${p.title}" />
@@ -119,7 +111,7 @@ track.innerHTML = projects.map(p => `
     </div>
   </article>
 `).join('');
-
+}
 let index = 0;
 const total = projects.length;
 
