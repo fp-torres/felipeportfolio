@@ -4,6 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio - Felipe Torres</title>
+
+  <!-- Favicon SVG (igual ao PT) -->
+  <link rel="icon" href='data:image/svg+xml;utf8,
+  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" ry="12" fill="%230f172a"/>
+    <text x="32" y="40" font-size="36" font-family="Inter, sans-serif" text-anchor="middle" fill="%23ffd100" font-weight="700">FT</text>
+  </svg>' type="image/svg+xml">
+
   <meta name="description" content="Felipe Torres’ portfolio — video editor and aspiring web developer." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body id="top">
   <!-- ====== Header / Navbar ====== -->
   <header class="navbar" role="banner">
@@ -20,50 +29,51 @@
         <span></span><span></span><span></span>
       </button>
       <nav id="nav" class="nav-links" role="navigation" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#education-experience">Education & Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#tools">Tools & Frameworks</a>
-        <a href="#contact">Contact</a>
+        <!-- IMPORTANTE: IDs iguais ao PT para compatibilidade com script.js -->
+        <a href="#sobre">About me</a>
+        <a href="#formacao-experiencia">Education & Experience</a>
+        <a href="#projetos">Projects</a>
+        <a href="#ferramentas">Tools & Frameworks</a>
+        <a href="#contato">Contact</a>
         <a href="index.html" lang="pt" hreflang="pt" class="lang-link">
-  Português BR <img src="https://flagcdn.com/br.svg" alt="Brazil Flag" class="flag">
-</a>
-
+          Português BR <img src="https://flagcdn.com/br.svg" alt="Brazil Flag" class="flag">
+        </a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- ====== About ====== -->
-    <section id="about" class="section">
+    <!-- ====== About (IDs iguais ao PT) ====== -->
+    <section id="sobre" class="section">
       <div class="container about">
         <img class="avatar" src="imgs/img1.jpg" alt="Felipe Torres' photo" />
         <div class="about-text">
-          <h1>Hi, I'm <span class="accent">Felipe Torres</span> 👋</h1>
+          <h1>I'm <span class="accent">Felipe Torres</span> 👋</h1>
           <p>
-            I'm a <strong>video editor</strong> and a <strong>web development</strong> student.
-            I love turning ideas into visual products and clean, fast, accessible web experiences.
-            Here you'll find my background, projects and the tools I use.
+            I’m a Video Editor and I’m building my path as a developer — I believe technology is a powerful way to turn ideas into reality. 🚀
+            My foundation is in HTML, CSS, and JavaScript, and with each project I aim to refine my skills and learn new tools.
+            This portfolio is where I share my progress, my experiments, and everything I’m building along the way.
+            I invite you to browse the site and get a closer look at my learning and creation process.
           </p>
           <div class="cta">
             <a class="btn primary" href="curriculo/enresumefelipetorres.pdf" download>Download Resume (EN)</a>
-            <a class="btn ghost" href="#contact">Get in touch</a>
+            <a class="btn ghost" href="#contato">Contact me</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====== Education & Experience ====== -->
-    <section id="education-experience" class="section alt">
+    <!-- ====== Education & Experience (IDs iguais ao PT) ====== -->
+    <section id="formacao-experiencia" class="section alt">
       <div class="container">
         <h2 class="section-title">Education & Experience</h2>
         <div class="cards-2col">
           <article class="card">
             <h3>Education</h3>
             <ul class="list">
-              <li><strong>Computer Programming</strong> — bachelor's (in progress)</li>
-              <li>Front‑end short courses (HTML, CSS, JavaScript)</li>
-              <li>Motion and Post‑production workshops</li>
+              <li><strong>Systems Analysis and Development</strong> — bachelor’s (in progress)</li>
+              <li>Front-end short courses (HTML, CSS, JavaScript)</li>
+              <li>IT Technician — Colégio Santo Inácio</li>
             </ul>
           </article>
 
@@ -72,35 +82,35 @@
           <article class="card">
             <h3>Experience</h3>
             <ul class="list">
-              <li><strong>Video Editor</strong> — 2017&nbsp;→&nbsp;present</li>
-              <li>Freelance landing pages & portfolios</li>
-              <li>Content creation for social media</li>
+              <li><strong>Video Editor</strong> — 2022 – present</li>
+              <li>IT Intern — Allternativa Filmes X — 2023</li>
+              <li>Administrative Assistant Intern — Allternativa Filmes X — 2019</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ====== Projects (Carousel) ====== -->
-    <section id="projects" class="section">
+    <!-- smooth divider (igual ao PT) -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ====== Projects (Carousel) (IDs iguais ao PT) ====== -->
+    <section id="projetos" class="section">
       <div class="container">
         <h2 class="section-title">Projects</h2>
 
         <div class="carousel" aria-roledescription="carousel">
           <button class="control prev" aria-label="Previous project" data-dir="prev">‹</button>
           <div class="viewport">
-            <div class="track" id="carousel-track">
-              <!-- Slides are injected by script.js -->
-            </div>
+            <div class="track" id="carousel-track"><!-- Slides injected via script.js --></div>
           </div>
           <button class="control next" aria-label="Next project" data-dir="next">›</button>
         </div>
-        <p class="hint">* The carousel auto-advances every 3 seconds. Hover to pause.</p>
       </div>
     </section>
 
-    <!-- ====== Tools & Frameworks ====== -->
-    <section id="tools" class="section alt">
+    <!-- ====== Tools & Frameworks (IDs iguais ao PT) ====== -->
+    <section id="ferramentas" class="section alt">
       <div class="container">
         <h2 class="section-title">Tools & Frameworks</h2>
 
@@ -121,14 +131,14 @@
             <div class="tool-years">2+ years</div>
           </div>
           <div class="tool-card" tabindex="0">
-            <i class="devicon-java-plain colored" aria-hidden="true"></i>
-            <div class="tool-name">Java</div>
-            <div class="tool-years">1+ year</div>
+            <i class="devicon-photoshop-plain white" aria-hidden="true"></i>
+            <div class="tool-name">Photoshop</div>
+            <div class="tool-years">3+ years</div>
           </div>
           <div class="tool-card" tabindex="0">
             <i class="devicon-bootstrap-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Bootstrap</div>
-            <div class="tool-years">1+ year</div>
+            <div class="tool-years">2+ years</div>
           </div>
           <div class="tool-card" tabindex="0">
             <i class="devicon-laravel-plain colored" aria-hidden="true"></i>
@@ -138,17 +148,17 @@
           <div class="tool-card" tabindex="0">
             <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
             <div class="tool-name">MySQL</div>
-            <div class="tool-years">1+ year</div>
+            <div class="tool-years">2+ years</div>
           </div>
           <div class="tool-card" tabindex="0">
             <i class="devicon-git-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Git</div>
-            <div class="tool-years">3+ years</div>
+            <div class="tool-years">2+ years</div>
           </div>
           <div class="tool-card" tabindex="0">
-            <i class="devicon-figma-plain colored" aria-hidden="true"></i>
-            <div class="tool-name">Figma</div>
-            <div class="tool-years">2+ years</div>
+            <i class="devicon-aftereffects-plain colored" aria-hidden="true"></i>
+            <div class="tool-name">After Effects</div>
+            <div class="tool-years">3+ years</div>
           </div>
           <div class="tool-card" tabindex="0">
             <i class="devicon-premierepro-plain colored" aria-hidden="true"></i>
@@ -156,39 +166,39 @@
             <div class="tool-years">5+ years</div>
           </div>
         </div>
-        <p class="hint">Tip: hover or focus a card to see the effect ✨</p>
       </div>
     </section>
   </main>
 
-  <!-- ====== Footer / Contact ====== -->
-  <footer id="contact" class="footer">
+  <!-- ====== Footer / Contact (IDs iguais ao PT) ====== -->
+  <footer id="contato" class="footer">
     <div class="container footer-inner">
-      <div class="footer-actions">
-        <a class="btn primary" href="assets/curriculo-felipe-torres-en.pdf" download>Download Resume (EN)</a>
+      <div class="contact-col">
+        <h2 class="section-title">Contact</h2>
+        <a href="mailto:felipetorresaraujo@email.com" class="contact-item" aria-label="E-mail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffd100" aria-hidden="true"><path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v.4l-10 6.25L2 6.4V6zm0 3.86V18a2 2 0 002 2h16a2 2 0 002-2V9.86l-9.39 5.86a2 2 0 01-2.22 0L2 9.86z"/></svg>
+          <span>felipetorresaraujo@email.com</span>
+        </a>
+        <a href="https://instagram.com/fp.torresz" target="_blank" rel="noopener" class="contact-item" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffd100" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zM17.8 6a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+          <span>@fp.torresz</span>
+        </a>
+        <a href="https://www.linkedin.com/in/felipe-torres-id" target="_blank" rel="noopener" class="contact-item" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffd100" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 102.5 6a2.5 2.5 0 002.48-2.5zM3 8h4v13H3zM9 8h3.8v1.8h.06A4.18 4.18 0 0117.6 8c3.6 0 4.4 2.2 4.4 5v8h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.39 0-2.76 1.9-2.76 3.8V21H9z"/></svg>
+          <span>felipe-torres-id</span>
+        </a>
+        <a href="https://github.com/fp-torres" target="_blank" rel="noopener" class="contact-item" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffd100" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.75-1.34-1.75-1.1-.75.08-.74.08-.74 1.21.08 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.96 0-1.31.47-2.38 1.25-3.22-.13-.31-.54-1.55.12-3.23 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 016.01 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.68.25 2.92.12 3.23.78.84 1.25 1.91 1.25 3.22 0 4.63-2.81 5.66-5.49 5.96.43.37.82 1.09.82 2.2v3.26c0 .32.22.69.83.58A12 12 0 0012 .5z"/></svg>
+          <span>@fp-torres</span>
+        </a>
       </div>
 
-      <div class="contact">
-        <a href="mailto:felipe@email.com" class="contact-item" aria-label="E-mail">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v.4l-10 6.25L2 6.4V6zm0 3.86V18a2 2 0 002 2h16a2 2 0 002-2V9.86l-9.39 5.86a2 2 0 01-2.22 0L2 9.86z"/></svg>
-          <span>felipe@email.com</span>
-        </a>
-        <a href="https://instagram.com/seu_instagram" target="_blank" rel="noopener" class="contact-item" aria-label="Instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zM17.8 6a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
-          <span>@seu_instagram</span>
-        </a>
-        <a href="https://www.linkedin.com/in/seu_linkedin" target="_blank" rel="noopener" class="contact-item" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 102.5 6a2.5 2.5 0 002.48-2.5zM3 8h4v13H3zM9 8h3.8v1.8h.06A4.18 4.18 0 0117.6 8c3.6 0 4.4 2.2 4.4 5v8h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.39 0-2.76 1.9-2.76 3.8V21H9z"/></svg>
-          <span>Felipe Torres</span>
-        </a>
-        <a href="https://github.com/seu_github" target="_blank" rel="noopener" class="contact-item" aria-label="GitHub">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.34-1.75-1.34-1.75-1.1-.75.08-.74.08-.74 1.21.08 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.76-1.62-2.67-.3-5.47-1.34-5.47-5.96 0-1.31.47-2.38 1.25-3.22-.13-.31-.54-1.55.12-3.23 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 016.01 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.68.25 2.92.12 3.23.78.84 1.25 1.91 1.25 3.22 0 4.63-2.81 5.66-5.49 5.96.43.37.82 1.09.82 2.2v3.26c0 .32.22.69.83.58A12 12 0 0012 .5z"/></svg>
-          <span>@seu_github</span>
-        </a>
+      <div class="footer-actions">
+        <p class="resume-text">📄 Want to learn more about my experience?</p>
+        <a class="btn primary" href="curriculo/enresumefelipetorres.pdf" download>Download Resume (EN)</a>
       </div>
-    </div> 
-      
-    
+    </div>
+
     <div class="copy">© 2025 Developed by Felipe Torres</div>
   </footer>
 
@@ -196,5 +206,29 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">⭡</button>
 
   <script src="script.js"></script>
+
+  <!-- ====== Project Modal (id/estrutura idênticos ao PT) ====== -->
+  <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="project-modal__backdrop" data-close-modal></div>
+
+    <div class="project-modal__dialog" role="document" aria-labelledby="projectModalTitle" aria-describedby="projectModalDesc">
+      <button class="project-modal__close" aria-label="Close" data-close-modal>×</button>
+
+      <div class="project-modal__media">
+        <img id="projectModalImg" alt="" />
+      </div>
+
+      <div class="project-modal__body">
+        <h3 id="projectModalTitle"></h3>
+        <p id="projectModalDesc" class="project-modal__text"></p>
+
+        <!-- Ordem garantida via CSS: GitHub (esquerda), Site (direita) -->
+        <div class="project-modal__actions">
+          <a id="projectModalGithub" class="btn primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a id="projectModalSite" class="btn ghost" target="_blank" rel="noopener">View site</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
