@@ -191,6 +191,11 @@ a{color:inherit; text-decoration:none}
 
 
 /* ===== Carousel ===== */
+.slide-footer .actions {
+  display: flex;
+  gap: 10px;
+}
+
 .carousel{ position:relative; user-select:none }
 .viewport{
   overflow:hidden; border-radius: var(--radius);

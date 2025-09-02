@@ -70,9 +70,10 @@ const ctaText = isEN ? 'View on GitHub' : 'Ver no GitHub';
 
 const projects = [
   {
-    title: isEN ? 'Landing Page — Agency X' : 'Landing Page — Agência X',
-    image: 'https://picsum.photos/1200/700?random=21',
-    github: 'https://github.com/seu_github/landing-agencia-x'
+    title: isEN ? 'Landing Page — Agency X' : 'Catálogo Hamburgueria — ForgeDevApps',
+    image: '/imgs/stackburguersiteforgedevapps.png',
+    github: 'https://github.com/fp-torres/stackburguer',
+    site: 'https://forgedevapps.com'
   },
   {
     title: isEN ? 'Minimal Portfolio' : 'Portfólio Minimalista',
@@ -106,6 +107,18 @@ if (track) {
     </article>
   `).join('');
 }
+track.innerHTML = projects.map(p => `
+  <article class="slide">
+    <img src="${p.image}" alt="${p.title}" />
+    <div class="slide-footer">
+      <div class="title">${p.title}</div>
+      <div class="actions">
+        <a class="btn primary" href="${p.github}" target="_blank" rel="noopener">${ctaText}</a>
+        ${p.site ? `<a class="btn ghost" href="${p.site}" target="_blank" rel="noopener">Ver site</a>` : ''}
+      </div>
+    </div>
+  </article>
+`).join('');
 
 let index = 0;
 const total = projects.length;
