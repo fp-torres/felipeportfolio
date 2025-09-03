@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
       title: isEN ? 'Landing Page — Agency X' : 'Catálogo Simples — ForgeDevApps',
-      image: 'imgs/site_steak_burger.png',
+      image: 'imgs/steakburgernew.png',
       github: 'https://github.com/fp-torres/stackburguer',
-      site: 'https://forgedevapps.com',
+      site: 'https://steakburger.forgedevapps.com',
       story: isEN
         ? 'A simple landing page designed for a burger house catalog. Focused on clean sections, quick navigation and a mouth-watering hero.'
         : 'Um catálogo simples para uma hamburgueria, com seções ágeis, navegação direta e um herói de dar água na boca.',
