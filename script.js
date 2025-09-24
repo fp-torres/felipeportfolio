@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const isEN = htmlLang.startsWith('en');
   const ctaText = isEN ? 'View on GitHub' : 'Ver no GitHub';
   const viewSiteText = isEN ? 'View site' : 'Ver site';
-
+// Teste1:
   // Por projeto:
   // - fit: 'cover' | 'contain'
   // - pos: ex. 'center', 'center 35%', 'center top'
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
       title: isEN ? 'Landing Page — Agency X' : 'Catálogo Simples — ForgeDevApps',
-      image: 'imgs/steakburgernew.png',
+      image: 'imgs/img3.png',
       github: 'https://github.com/fp-torres/stackburguer',
       site: 'https://steakburger.forgedevapps.com',
       story: isEN
