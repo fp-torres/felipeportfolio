@@ -104,15 +104,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
       title: isEN ? 'Landing Page — Agency X' : 'Catálogo Simples — ForgeDevApps',
-      image: 'imgs/img3.png',
+      image: 'imgs/img4.png',
       github: 'https://github.com/fp-torres/stackburguer',
       site: 'https://steakburger.forgedevapps.com',
       story: isEN
         ? 'A simple landing page designed for a burger house catalog. Focused on clean sections, quick navigation and a mouth-watering hero.'
         : 'Um catálogo simples para uma hamburgueria, com seções ágeis, navegação direta e um herói de dar água na boca.',
-      fit: 'cover',        // corta para preencher
-      pos: 'center 50%',   // ajuste o foco do corte (ex.: 30%/50%)
-      strictCover: false   // true = força cover mesmo se ficar "zoomado"
+      fit: 'cover',
+      pos: 'center 50%',
+      strictCover: true   // <--- Ficará assim
     },
     {
       title: isEN ? 'Minimal Portfolio' : 'Portfólio Minimalista',
