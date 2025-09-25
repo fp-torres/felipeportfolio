@@ -359,3 +359,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!a.rel) a.rel = 'noopener';
   });
 }); // DOMContentLoaded
+/* ========= Accordion de Certificações ========= */
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      // Fecha todos os outros painéis abertos (opcional, mas recomendado)
+      const openItem = document.querySelector('.accordion-header.active');
+      if(openItem && openItem !== header) {
+        openItem.classList.remove('active');
+        openItem.setAttribute('aria-expanded', 'false');
+        const openPanel = openItem.nextElementSibling;
+        openPanel.style.maxHeight = null;
+        openPanel.setAttribute('hidden', '');
+      }
+
+      // Abre ou fecha o painel clicado
+      header.classList.toggle('active');
+      header.setAttribute('aria-expanded', header.classList.contains('active').toString());
+      
+      const panel = header.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        panel.setAttribute('hidden', '');
+      } else {
+        panel.removeAttribute('hidden');
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });

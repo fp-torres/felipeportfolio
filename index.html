@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio - Felipe Torres</title>
 
-  <!-- Favicon SVG -->
   <link rel="icon" href='data:image/svg+xml;utf8,
   <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
     <rect width="64" height="64" rx="12" ry="12" fill="%230f172a"/>
@@ -21,7 +20,6 @@
 </head>
 
 <body id="top">
-  <!-- ====== Header / Navbar ====== -->
   <header class="navbar" role="banner">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="Início">FT</a>
@@ -42,7 +40,6 @@
   </header>
 
   <main>
-    <!-- ====== Sobre ====== -->
     <section id="sobre" class="section">
       <div class="container about">
         <img class="avatar" src="imgs/img2.jpg" alt="Foto de Felipe Torres" />
@@ -62,38 +59,197 @@
       </div>
     </section>
 
-    <!-- ====== Formação & Experiência ====== -->
-    <section id="formacao-experiencia" class="section alt">
+     <section id="formacao-experiencia" class="section alt">
       <div class="container">
         <h2 class="section-title">Formação e Experiência</h2>
-        <div class="cards-2col">
-          <article class="card">
-            <h3>Formação</h3>
-            <ul class="list">
-              <li><strong>Análise e Desenvolvimento de Sistemas</strong> — graduação <br>(em andamento)</li>
-              <li>Cursos livres de Front-end (HTML, CSS, JavaScript)</li>
-              <li>Técnico em Informática -  Colégio Santo Inácio</li>
-            </ul>
-          </article>
 
-          <div class="divider-symbol" aria-hidden="true">𒊹</div>
+        <div class="experience-group">
+          <h3 class="experience-subtitle">Formação Acadêmica</h3>
+          
+          <div class="experience-item">
+            <div class="experience-header">
+              <h4>Análise e Desenvolvimento de Sistemas</h4>
+              <span class="experience-date">2024 - 2026</span>
+            </div>
+            <p class="experience-location">Universidade Veiga de Almeida</p>
+          </div>
 
-          <article class="card">
-            <h3>Experiência</h3>
-            <ul class="list">
-              <li><strong>Editor de Audiovisual</strong> — 2022 - (presente)</li>
-              <li>Estágio TI - Allternativa Filmes X - 2023</li>
-              <li>Estágio Auxiliar ADM - Allternativa Filmes X - 2019</li>
-            </ul>
-          </article>
+          <div class="experience-item">
+            <div class="experience-header">
+              <h4>Técnico em TI - Desenvolvimento Web</h4>
+              <span class="experience-date">2022 - 2023</span>
+            </div>
+            <p class="experience-location">Colégio Santo Inácio</p>
+          </div>
         </div>
+
+        <div class="experience-group">
+          <h3 class="experience-subtitle">Experiência Profissional</h3>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <h4>Editor de Vídeo</h4>
+              <span class="experience-date">Junho 2022 - Presente</span>
+            </div>
+            <p class="experience-location">Allternativa Filmes X</p>
+            <p class="experience-description">
+              Atuação na edição e finalização de vídeos cinematográficos, institucionais, documentários e comerciais, além do desenvolvimento de animações em motion graphics com o pacote Adobe.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <h4>Estagiário de TI</h4>
+              <span class="experience-date">Abril 2023 - Julho 2023</span>
+            </div>
+            <p class="experience-location">Allternativa Filmes X</p>
+            <p class="experience-description">
+              Suporte à manutenção de sistemas, execução de testes de software para verificação de funcionalidades, instalação e configuração de softwares e elaboração de documentações técnicas.
+            </p>
+          </div>
+        </div>
+        
       </div>
+   </div> <div class="experience-group">
+          <h3 class="experience-subtitle text-center">Certificações</h3>
+
+       <div class="accordion">
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-1">
+                <span class="accordion-title">Introdução ao Git e GitHub</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-1" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Introdução%20ao%20Git%20e%20GitHub.png" alt="Certificado de Introdução ao Git e GitHub">
+                  <p>Emitido por: FGV</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-2">
+                <span class="accordion-title">Modelagem de Dados</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-2" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Modelagem%20de%20Dados.png" alt="Certificado de Modelagem de Dados">
+                  <p>Emitido por: Fundação Bradesco</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-3">
+                <span class="accordion-title">Implementando Banco de Dados</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-3" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Implementando%20Banco%20de%20Dados.png" alt="Certificado de Implementando Banco de Dados">
+                  <p>Emitido por: Fundação Bradesco</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-4">
+                <span class="accordion-title">Administrando Banco de Dados</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-4" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Administrando%20Banco%20de%20Dados.png" alt="Certificado de Administrando Banco de Dados">
+                  <p>Emitido por: Fundação Bradesco</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-5">
+                <span class="accordion-title">Introduction to Cybersecurity</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-5" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Introduction%20to%20Cybersecurity.png" alt="Certificado de Introduction to Cybersecurity">
+                  <p>Emitido por: Cisco Networking Academy</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-6">
+                <span class="accordion-title">Introduction to LOT</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-6" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Introduction%20to%20LOT.png" alt="Certificado de Introduction to LOT">
+                  <p>Emitido por: Cisco Networking Academy</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-7">
+                <span class="accordion-title">Introdução à Gestão de Projetos</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-7" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Introdução%20à%20Gestão%20de%20Projetos.png" alt="Certificado de Introdução à Gestão de Projetos">
+                  <p>Emitido por: Fundação Bradesco</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-8">
+                <span class="accordion-title">Fundamentos de TI: Hardware e Software</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-8" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Fundamentos%20de%20TI%20-%20Hardware%20e%20Software.png" alt="Certificado de Fundamentos de TI">
+                  <p>Emitido por: Fundação Bradesco</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-9">
+                <span class="accordion-title">Programação Orientada a Objetos (POO)</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-9" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Introdução%20à%20Programação%20Orientada%20a%20Objetos%20(POO).png" alt="Certificado de Programação Orientada a Objetos">
+                  <p>Emitido por: Fundação Bradesco</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-10">
+                <span class="accordion-title">Rio Innovation Week 2023</span>
+                <span class="accordion-icon"></span>
+              </button>
+              <div id="cert-panel-10" class="accordion-panel" hidden>
+                <div class="accordion-content">
+                  <img src="imgs/certs/Rio%20Innovation%20Week%202023.png" alt="Certificado Rio Innovation Week 2023">
+                  <p>Participação</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
     </section>
 
-    <!-- divisor suave entre seções -->
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- ====== Projetos (Carousel) ====== -->
     <section id="projetos" class="section">
       <div class="container">
         <h2 class="section-title">Projetos</h2>
@@ -101,65 +257,64 @@
         <div class="carousel" aria-roledescription="carousel">
           <button class="control prev" aria-label="Projeto anterior" data-dir="prev">‹</button>
           <div class="viewport">
-            <div class="track" id="carousel-track"><!-- Slides injetados via script.js --></div>
+            <div class="track" id="carousel-track"></div>
           </div>
           <button class="control next" aria-label="Próximo projeto" data-dir="next">›</button>
         </div>
       </div>
     </section>
 
-    <!-- ====== Ferramentas & Frameworks ====== -->
     <section id="ferramentas" class="section alt">
       <div class="container">
         <h2 class="section-title">Ferramentas & Frameworks</h2>
 
         <div class="tools-grid">
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Estruturação semântica de conteúdo para web, garantindo acessibilidade e código limpo.">
             <i class="devicon-html5-plain colored" aria-hidden="true"></i>
             <div class="tool-name">HTML5</div>
             <div class="tool-years">2+ anos</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Estilização e criação de layouts responsivos (mobile-first), com foco em interfaces modernas e na experiência do utilizador.">
             <i class="devicon-css3-plain colored" aria-hidden="true"></i>
             <div class="tool-name">CSS3</div>
             <div class="tool-years">2+ anos</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Consumo de APIs REST, manipulação do DOM e organização de rotas e estados.">
             <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
             <div class="tool-name">JavaScript</div>
             <div class="tool-years">2+ anos</div>
           </div>
-          <div class="tool-card" tabindex="0">
-            <i class="devicon-photoshop-plain white" aria-hidden="true"></i>
+          <div class="tool-card" tabindex="0" data-tooltip="Edição de imagem e criação de layouts para projetos audiovisuais e web.">
+            <i class="devicon-photoshop-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Photoshop</div>
             <div class="tool-years">3+ ano</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Desenvolvimento ágil de interfaces responsivas utilizando o sistema de grid e componentes pré-construídos para prototipagem rápida.">
             <i class="devicon-bootstrap-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Bootstrap</div>
             <div class="tool-years">2+ ano</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Desenvolvimento de aplicações web back-end com PHP, seguindo o padrão MVC para construção de CRUDs e sistemas robustos.">
             <i class="devicon-laravel-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Laravel</div>
             <div class="tool-years">1+ ano</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Modelagem ER, normalização e consultas SQL avançadas (JOINs/agregações).">
             <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
             <div class="tool-name">MySQL</div>
             <div class="tool-years">2+ ano</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Versionamento de código com Git e colaboração em equipe com GitHub.">
             <i class="devicon-git-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Git</div>
             <div class="tool-years">2+ anos</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Criação de animações e motion graphics para projetos audiovisuais.">
             <i class="devicon-aftereffects-plain colored"></i>
             <div class="tool-name">After Effects</div>
             <div class="tool-years">3+ anos</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Edição, finalização e tratamento de cor profissional para vídeos.">
             <i class="devicon-premierepro-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Premiere Pro</div>
             <div class="tool-years">5+ anos</div>
@@ -169,7 +324,6 @@
     </section>
   </main>
 
-  <!-- ====== Footer / Contato ====== -->
   <footer id="contato" class="footer">
     <div class="container footer-inner">
       <div class="contact-col">
@@ -201,12 +355,10 @@
     <div class="copy">© 2025 Desenvolvido por Felipe Torres</div>
   </footer>
 
-  <!-- Back to top -->
   <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" title="Voltar ao topo">⭡</button>
 
   <script src="script.js"></script>
 
-  <!-- ====== Modal de Projeto ====== -->
   <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="project-modal__backdrop" data-close-modal></div>
 
@@ -221,7 +373,6 @@
         <h3 id="projectModalTitle"></h3>
         <p id="projectModalDesc" class="project-modal__text"></p>
 
-        <!-- ORDEM INVERTIDA AQUI: GitHub primeiro (esquerda), Site depois (direita) -->
         <div class="project-modal__actions">
           <a id="projectModalGithub" class="btn primary" target="_blank" rel="noopener">Ver no GitHub</a>
           <a id="projectModalSite" class="btn ghost" target="_blank" rel="noopener">Ver site</a>
@@ -229,6 +380,15 @@
       </div>
     </div>
   </div>
+  <div class="diploma-modal" id="diplomaModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="diploma-modal__backdrop" data-close-diploma-modal></div>
+    <div class="diploma-modal__dialog" role="document">
+      <button class="diploma-modal__close" aria-label="Fechar" data-close-diploma-modal>×</button>
+      <div class="diploma-modal__content">
+        </div>
+    </div>
+  </div>
+  
 
 </body>
 </html>
