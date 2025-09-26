@@ -1,11 +1,11 @@
 /* =====================================================================================
- *  Portfolio — Felipe Torres
- *  script.js (carrossel + modal) — v3.7
- *  - Fit simples por projeto: 'cover' (corta) | 'contain' (sem corte)
- *  - pos (object-position) p/ focar o corte
- *  - Auto-ajuste: se 'cover' ficaria "zoomado" demais, muda p/ 'contain'
- *    (a menos que strictCover: true)
- *  - Active link do "Contato" mais confiável (IO + fallback no fundo + clique/hash)
+ * Portfolio — Felipe Torres
+ * script.js (carrossel + modal) — v3.7
+ * - Fit simples por projeto: 'cover' (corta) | 'contain' (sem corte)
+ * - pos (object-position) p/ focar o corte
+ * - Auto-ajuste: se 'cover' ficaria "zoomado" demais, muda p/ 'contain'
+ * (a menos que strictCover: true)
+ * - Active link do "Contato" mais confiável (IO + fallback no fundo + clique/hash)
  * ===================================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =====================================================================================
-   *  PROJETOS / CARROSSEL
+   * PROJETOS / CARROSSEL
    * ===================================================================================== */
   const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
   const isEN = htmlLang.startsWith('en');
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {passive:true});
 
   /* =====================================================================================
-   *  MODAL DE PROJETO
+   * MODAL DE PROJETO
    * ===================================================================================== */
   const modalEl     = document.getElementById('projectModal');
   const modalImg    = document.getElementById('projectModalImg');
@@ -358,12 +358,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!a.target) a.target = '_blank';
     if(!a.rel) a.rel = 'noopener';
   });
-}); // DOMContentLoaded
 /* ========= Accordion de Certificações ========= */
   const accordionHeaders = document.querySelectorAll('.accordion-header');
   accordionHeaders.forEach(header => {
     header.addEventListener('click', () => {
-      // Fecha todos os outros painéis abertos (opcional, mas recomendado)
       const openItem = document.querySelector('.accordion-header.active');
       if(openItem && openItem !== header) {
         openItem.classList.remove('active');
@@ -372,8 +370,6 @@ document.addEventListener('DOMContentLoaded', () => {
         openPanel.style.maxHeight = null;
         openPanel.setAttribute('hidden', '');
       }
-
-      // Abre ou fecha o painel clicado
       header.classList.toggle('active');
       header.setAttribute('aria-expanded', header.classList.contains('active').toString());
       
@@ -387,3 +383,42 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  /* ========= NOVO: Modal do Diploma ========= */
+  const openDiplomaBtn = document.querySelector('.open-diploma-modal');
+  const diplomaModal = document.getElementById('diplomaModal');
+  const diplomaModalContent = diplomaModal?.querySelector('.diploma-modal__content');
+  const diplomaImageFiles = [
+      'curriculo/Diploma Técnico de Informática_Page_1.png',
+      'curriculo/Diploma Técnico de Informática_Page_2.png'
+  ];
+
+  function openDiploma() {
+    if (!diplomaModal || !diplomaModalContent) return;
+    diplomaModalContent.innerHTML = diplomaImageFiles.map(src => `<img src="${src}" alt="Página do Diploma">`).join('');
+    diplomaModal.classList.add('is-open');
+    diplomaModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeDiploma() {
+    if (!diplomaModal) return;
+    diplomaModal.classList.remove('is-open');
+    diplomaModal.setAttribute('aria-hidden', 'true');
+    if (!document.querySelector('.project-modal.is-open')) {
+        document.body.classList.remove('modal-open');
+    }
+  }
+
+  openDiplomaBtn?.addEventListener('click', openDiploma);
+  diplomaModal?.addEventListener('click', (e) => {
+    if (e.target.hasAttribute('data-close-diploma-modal')) {
+      closeDiploma();
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && diplomaModal?.classList.contains('is-open')) {
+        closeDiploma();
+    }
+  });
+});
