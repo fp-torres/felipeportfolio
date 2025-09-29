@@ -537,142 +537,186 @@ body.modal-open{ overflow: hidden; }
     padding: 8px 14px;
     font-size: 0.9rem;
 }
-/* 3. Estilos para a nova Timeline de Experiência HORIZONTAL (v2) */
-.h-timeline-container {
-  position: relative;
-  padding-top: 30px;
+/* 3. Estilos para a Timeline de Experiência (VERSÃO POLIMENTO ARTÍSTICO) */
+.experience-group {
+    max-width: 100%;
+    overflow-x: hidden;
 }
-.company-header {
+
+.timeline-wrapper {
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
-.company-header h4 {
+
+.timeline-header {
+  margin-bottom: 24px;
+}
+
+.timeline-header h4 {
   display: inline-block;
-  padding: 8px 16px;
-  background: var(--surface);
+  padding: 10px 24px;
+  background: var(--surface); /* LINHA ALTERADA */
   border: 1px solid rgba(148, 163, 184, .2);
   border-radius: 12px;
   margin: 0;
+  color: var(--text);
+  font-weight: 600;
+  transition: all .3s ease;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,.05), 0 2px 4px rgba(0,0,0,.2);
+}
+.timeline-header h4:hover {
+  border-color: var(--primary);
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 0 20px var(--ring), inset 0 1px 2px rgba(255,255,255,.05);
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr; /* Força os itens a terem a mesma altura de base */
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* A linha horizontal principal */
-.h-timeline {
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  padding: 30px 0;
-}
-.h-timeline::before {
+.timeline-grid::before {
   content: '';
   position: absolute;
+  left: 15%;
+  right: 15%;
   top: 0;
-  left: 10%;
-  right: 10%;
   height: 2px;
-  background-color: rgba(148, 163, 184, .2);
-  z-index: 0;
+  background-image: linear-gradient(to right, rgba(148, 163, 184, 0), rgba(148, 163, 184, .2), rgba(148, 163, 184, 0));
 }
 
-.h-timeline-item {
+.timeline-item {
   position: relative;
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  padding-top: 50px; /* Espaço para o conector */
 }
 
-/* O ponto na linha, agora com um conector */
-.h-timeline-item::before {
+/* O Ponto (bola) na linha - VERSÃO CORRIGIDA */
+.timeline-item::before {
   content: '';
   position: absolute;
-  top: -8px; /* Alinha com a linha principal */
+  top: -7px; /* Ajuste para o alinhamento vertical perfeito */
+  left: 50%;
+  transform: translateX(-50%);
   width: 16px;
   height: 16px;
-  background-color: var(--primary);
+  background-color: var(--primary); /* Amarelo sólido */
   border-radius: 50%;
-  z-index: 1;
-  border: 4px solid var(--bg);
+  z-index: 2; /* Garante que fique POR CIMA da linha (que tem z-index 0) */
+  transition: all .3s ease;
 }
-/* A linha conectora do ponto ao cartão */
-.h-timeline-item::after {
+/* O conector curvo */
+.timeline-item::after {
   content: '';
   position: absolute;
-  width: 2px;
-  background-color: rgba(148, 163, 184, .2);
-  z-index: 0;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 42px;
+  border: 2px solid rgba(148, 163, 184, .2);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top: none; /* Cria a forma de U invertido */
+  transition: all .3s ease;
 }
 
-.h-timeline-content {
+.timeline-content {
   background: var(--surface);
   border: 1px solid rgba(148, 163, 184, .2);
   border-radius: 12px;
   padding: 16px;
-  width: 90%;
-  max-width: 280px;
   text-align: center;
-  transition: all .2s ease;
+  width: 100%;
+  transition: all .3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.h-timeline-content:hover {
-  transform: translateY(-4px);
+
+.timeline-content h5 { margin: 0 0 4px 0; font-size: 1.1rem; color: var(--text); }
+.timeline-date { font-size: 0.9rem; color: var(--muted); margin-bottom: 12px; display: block; }
+.timeline-content p { 
+  margin: 0; 
+  font-size: 0.95rem; 
+  color: var(--text); 
+  opacity: .9;
+  flex-grow: 1;
+}
+
+/* Animação de pulso para o hover */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--ring); }
+  70% { box-shadow: 0 0 0 8px rgba(255, 209, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 209, 0, 0); }
+}
+
+/* Efeito Hover unificado */
+.timeline-item:hover .timeline-content {
   border-color: var(--primary);
+  transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0,0,0,.3);
 }
-.h-timeline-content h5 { margin: 0 0 4px 0; font-size: 1.1rem; color: var(--text); }
-.h-timeline-date { font-size: 0.9rem; color: var(--muted); margin-bottom: 8px; display: block; }
-.h-timeline-content p { margin: 0; font-size: 0.95rem; color: var(--text); opacity: .9; }
-
-/* Efeito alternado (cima/baixo) */
-.h-timeline-item:nth-child(odd) {
-  align-items: flex-start; /* Alinha o item para cima */
+.timeline-item:hover::before {
+  animation: pulse 1s infinite;
 }
-.h-timeline-item:nth-child(odd)::after {
-  top: 8px; /* Conector para baixo */
-  height: 22px;
+.timeline-item:hover::after { 
+  border-color: var(--primary);
 }
-.h-timeline-item:nth-child(even) {
-  align-items: flex-end; /* Alinha o item para baixo */
-}
-.h-timeline-item:nth-child(even)::after {
-  bottom: 8px; /* Conector para cima */
-  height: 22px;
-}
-
-/* Design Responsivo: A timeline vira vertical em telas menores */
-@media (max-width: 768px) {
-  .h-timeline {
+/* Design Responsivo (vertical) - VERSÃO FINAL CORRIGIDA */
+@media (max-width: 800px) {
+  /* Reseta os estilos do layout horizontal */
+  .timeline-grid {
     display: block;
-    padding-left: 20px;
+    max-width: 100%;
+    margin-top: 20px;
     padding-top: 0;
+    position: relative;
   }
-  .h-timeline-container {
-    padding-top: 0;
-  }
-  .h-timeline::before { /* Linha vira vertical */
-    left: 8px; 
-    top: 10px;
-    bottom: 10px;
-    width: 2px;
-    height: auto;
-    right: auto;
-  }
-  .h-timeline-item {
-    padding-left: 20px;
-    margin-bottom: 24px;
-    align-items: flex-start; /* Reseta o alinhamento */
-  }
-  .h-timeline-item::before { /* Ponto na linha vertical */
-    left: -1px;
-    top: 8px;
-    transform: translateX(-50%);
-  }
-  .h-timeline-item::after { /* Esconde conectores verticais */
+
+  /* Esconde a linha horizontal e os conectores curvos */
+  .timeline-grid::before,
+  .timeline-item::after {
     display: none;
   }
-  .h-timeline-item:nth-child(odd) .h-timeline-content,
-  .h-timeline-item:nth-child(even) .h-timeline-content {
-    margin: 0;
-    width: 100%;
-    max-width: none;
+
+  /* Cria a nova linha vertical, que se ajusta ao conteúdo */
+  .timeline-wrapper {
+    position: relative;
+    padding-left: 20px; /* Cria espaço para a linha e os pontos */
+  }
+  .timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 8px; /* Posição da linha à esquerda */
+    top: 60px; /* Altura do header da empresa */
+    bottom: 15px;
+    width: 2px;
+    background-color: rgba(148, 163, 184, .2);
+    z-index: 0;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: 25px; /* Espaço para o conteúdo não sobrepor a linha */
+    padding-top: 0;
+    margin-bottom: 24px;
+  }
+
+  /* O Ponto (bola) - Alinhado com a linha vertical */
+  .timeline-item::before {
+    top: 5px; /* Alinha verticalmente com a primeira linha de texto */
+    left: -15px; /* Valor calculado para centralizar na linha */
+    transform: none; /* Remove a transformação anterior */
+    z-index: 1; /* Garante que fique à frente da linha */
+  }
+
+  .timeline-content {
     text-align: left;
   }
 }

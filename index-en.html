@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio - Felipe Torres</title>
 
-  <!-- Favicon SVG (igual ao PT) -->
   <link rel="icon" href='data:image/svg+xml;utf8,
   <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
     <rect width="64" height="64" rx="12" ry="12" fill="%230f172a"/>
@@ -21,7 +20,6 @@
 </head>
 
 <body id="top">
-  <!-- ====== Header / Navbar ====== -->
   <header class="navbar" role="banner">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="Home">FT</a>
@@ -29,7 +27,6 @@
         <span></span><span></span><span></span>
       </button>
       <nav id="nav" class="nav-links" role="navigation" aria-label="Main navigation">
-        <!-- IMPORTANTE: IDs iguais ao PT para compatibilidade com script.js -->
         <a href="#sobre">About me</a>
         <a href="#formacao-experiencia">Education & Experience</a>
         <a href="#projetos">Projects</a>
@@ -43,16 +40,15 @@
   </header>
 
   <main>
-    <!-- ====== About (IDs iguais ao PT) ====== -->
     <section id="sobre" class="section">
       <div class="container about">
         <img class="avatar" src="imgs/img2.jpg" alt="Felipe Torres' photo" />
         <div class="about-text">
           <h1>I'm <span class="accent">Felipe Torres</span> 👋</h1>
           <p>
-            I’m a Video Editor and I’m building my path as a developer — I believe technology is a powerful way to turn ideas into reality. 🚀
-            My foundation is in HTML, CSS, and JavaScript, and with each project I aim to refine my skills and learn new tools.
-            This portfolio is where I share my progress, my experiments, and everything I’m building along the way.
+            I’m a Video Editor building my path as a developer — I believe technology is a powerful way to turn ideas into reality. 🚀
+            My foundation is in HTML, CSS, and JavaScript, and with each project, I aim to refine my skills and learn new tools.
+            This portfolio is where I share my progress, experiments, and everything I’m building along the way.
             I invite you to browse the site and get a closer look at my learning and creation process.
           </p>
           <div class="cta">
@@ -63,104 +59,178 @@
       </div>
     </section>
 
-    <!-- ====== Education & Experience (IDs iguais ao PT) ====== -->
     <section id="formacao-experiencia" class="section alt">
       <div class="container">
         <h2 class="section-title">Education & Experience</h2>
-        <div class="cards-2col">
-          <article class="card">
-            <h3>Education</h3>
-            <ul class="list">
-              <li><strong>Systems Analysis and Development</strong> — bachelor’s (in progress)</li>
-              <li>Front-end short courses (HTML, CSS, JavaScript)</li>
-              <li>IT Technician — Colégio Santo Inácio</li>
-            </ul>
-          </article>
 
-          <div class="divider-symbol" aria-hidden="true">𒊹</div>
+        <div class="experience-group">
+          <h3 class="experience-subtitle">Academic Education</h3>
+          <div class="grid-layout">
+            <div class="experience-item">
+              <div class="experience-header">
+                <h4>Systems Analysis and Development</h4>
+                <span class="experience-date">2024 - 2026</span>
+              </div>
+              <p class="experience-location">Universidade Veiga de Almeida</p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-header">
+                <h4>IT Technician - Web Development</h4>
+                <span class="experience-date">2022 - 2023</span>
+              </div>
+              <p class="experience-location">Colégio Santo Inácio</p>
+              <div class="item-cta">
+                <button class="btn primary open-diploma-modal" aria-controls="diplomaModal">View Diploma</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <article class="card">
-            <h3>Experience</h3>
-            <ul class="list">
-              <li><strong>Video Editor</strong> — 2022 – present</li>
-              <li>IT Intern — Allternativa Filmes X — 2023</li>
-              <li>Administrative Assistant Intern — Allternativa Filmes X — 2019</li>
-            </ul>
-          </article>
+       <div class="experience-group">
+          <h3 class="experience-subtitle">Professional Experience</h3>
+          <div class="timeline-wrapper">
+            <div class="timeline-header">
+                <h4>Allternativa Filmes X</h4>
+            </div>
+            <div class="timeline-grid">
+              <div class="timeline-item timeline-item-1">
+                <div class="timeline-content">
+                  <h5>Administrative Assistant Intern</h5>
+                  <span class="timeline-date">March 2019 - July 2020</span>
+                  <p>Assisted with office routines, such as filing and digitizing documents, and supported payment controls.</p>
+                </div>
+              </div>
+              <div class="timeline-item timeline-item-2">
+                <div class="timeline-content">
+                  <h5>IT Intern</h5>
+                  <span class="timeline-date">April 2023 - July 2023</span>
+                  <p>Provided support for systems maintenance, executed software tests to verify functionalities, and drafted technical documentation.</p>
+                </div>
+              </div>
+              <div class="timeline-item timeline-item-3">
+                <div class="timeline-content">
+                  <h5>Video Editor</h5>
+                  <span class="timeline-date">June 2022 - 2025</span>
+                  <p>Editing and post-production of videos, in addition to developing motion graphics animations with the Adobe Suite.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="experience-group">
+          <h3 class="experience-subtitle">Certifications</h3>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-1"><span class="accordion-title">Introduction to Git and GitHub</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-1" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Introdução%20ao%20Git%20e%20GitHub.png" alt="Introduction to Git and GitHub Certificate"><p>Issued by: FGV</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-2"><span class="accordion-title">Data Modeling</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-2" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Modelagem%20de%20Dados.png" alt="Data Modeling Certificate"><p>Issued by: Fundação Bradesco</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-3"><span class="accordion-title">Implementing Databases</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-3" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Implementando%20Banco%20de%20Dados.png" alt="Implementing Databases Certificate"><p>Issued by: Fundação Bradesco</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-4"><span class="accordion-title">Administering Databases</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-4" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Administrando%20Banco%20de%20Dados.png" alt="Administering Databases Certificate"><p>Issued by: Fundação Bradesco</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-5"><span class="accordion-title">Introduction to Cybersecurity</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-5" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Introduction%20to%20Cybersecurity.png" alt="Introduction to Cybersecurity Certificate"><p>Issued by: Cisco Networking Academy</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-6"><span class="accordion-title">Introduction to IoT</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-6" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Introduction%20to%20LOT.png" alt="Introduction to IoT Certificate"><p>Issued by: Cisco Networking Academy</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-7"><span class="accordion-title">Introduction to Project Management</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-7" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Introdução%20à%20Gestão%20de%20Projetos.png" alt="Introduction to Project Management Certificate"><p>Issued by: Fundação Bradesco</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-8"><span class="accordion-title">IT Fundamentals: Hardware and Software</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-8" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Fundamentos%20de%20TI%20-%20Hardware%20e%20Software.png" alt="IT Fundamentals Certificate"><p>Issued by: Fundação Bradesco</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-9"><span class="accordion-title">Object-Oriented Programming (OOP)</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-9" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Introdução%20à%20Programação%20Orientada%20a%20Objetos%20(POO).png" alt="Object-Oriented Programming Certificate"><p>Issued by: Fundação Bradesco</p></div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="cert-panel-10"><span class="accordion-title">Rio Innovation Week 2023</span><span class="accordion-icon"></span></button>
+              <div id="cert-panel-10" class="accordion-panel" hidden><div class="accordion-content"><img src="imgs/certs/Rio%20Innovation%20Week%202023.png" alt="Rio Innovation Week 2023 Certificate"><p>Attendance</p></div></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- smooth divider (igual ao PT) -->
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- ====== Projects (Carousel) (IDs iguais ao PT) ====== -->
     <section id="projetos" class="section">
       <div class="container">
         <h2 class="section-title">Projects</h2>
-
         <div class="carousel" aria-roledescription="carousel">
           <button class="control prev" aria-label="Previous project" data-dir="prev">‹</button>
           <div class="viewport">
-            <div class="track" id="carousel-track"><!-- Slides injected via script.js --></div>
+            <div class="track" id="carousel-track"></div>
           </div>
           <button class="control next" aria-label="Next project" data-dir="next">›</button>
         </div>
       </div>
     </section>
 
-    <!-- ====== Tools & Frameworks (IDs iguais ao PT) ====== -->
     <section id="ferramentas" class="section alt">
       <div class="container">
         <h2 class="section-title">Tools & Frameworks</h2>
-
         <div class="tools-grid">
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Semantic content structuring for the web, ensuring accessibility and clean code.">
             <i class="devicon-html5-plain colored" aria-hidden="true"></i>
             <div class="tool-name">HTML5</div>
             <div class="tool-years">2+ years</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Styling and creation of responsive (mobile-first) layouts, focusing on modern interfaces and user experience.">
             <i class="devicon-css3-plain colored" aria-hidden="true"></i>
             <div class="tool-name">CSS3</div>
             <div class="tool-years">2+ years</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Consuming REST APIs, DOM manipulation, and handling routes and state.">
             <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
             <div class="tool-name">JavaScript</div>
             <div class="tool-years">2+ years</div>
           </div>
-          <div class="tool-card" tabindex="0">
-            <i class="devicon-photoshop-plain white" aria-hidden="true"></i>
+          <div class="tool-card" tabindex="0" data-tooltip="Image editing and layout creation for audiovisual and web projects.">
+            <i class="devicon-photoshop-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Photoshop</div>
             <div class="tool-years">3+ years</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Agile development of responsive interfaces using the grid system and pre-built components for rapid prototyping.">
             <i class="devicon-bootstrap-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Bootstrap</div>
             <div class="tool-years">2+ years</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Developing back-end web applications with PHP, following the MVC pattern to build CRUDs and robust systems.">
             <i class="devicon-laravel-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Laravel</div>
             <div class="tool-years">1+ year</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="ER modeling, normalization, and advanced SQL queries (JOINs/aggregations).">
             <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
             <div class="tool-name">MySQL</div>
             <div class="tool-years">2+ years</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Code versioning with Git and team collaboration using GitHub.">
             <i class="devicon-git-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Git</div>
             <div class="tool-years">2+ years</div>
           </div>
-          <div class="tool-card" tabindex="0">
-            <i class="devicon-aftereffects-plain colored" aria-hidden="true"></i>
+          <div class="tool-card" tabindex="0" data-tooltip="Creating animations and motion graphics for audiovisual projects.">
+            <i class="devicon-aftereffects-plain colored"></i>
             <div class="tool-name">After Effects</div>
             <div class="tool-years">3+ years</div>
           </div>
-          <div class="tool-card" tabindex="0">
+          <div class="tool-card" tabindex="0" data-tooltip="Professional video editing, finishing, and color grading.">
             <i class="devicon-premierepro-plain colored" aria-hidden="true"></i>
             <div class="tool-name">Premiere Pro</div>
             <div class="tool-years">5+ years</div>
@@ -170,7 +240,6 @@
     </section>
   </main>
 
-  <!-- ====== Footer / Contact (IDs iguais ao PT) ====== -->
   <footer id="contato" class="footer">
     <div class="container footer-inner">
       <div class="contact-col">
@@ -192,37 +261,28 @@
           <span>@fp-torres</span>
         </a>
       </div>
-
       <div class="footer-actions">
         <p class="resume-text">📄 Want to learn more about my experience?</p>
         <a class="btn primary" href="curriculo/enresumefelipetorres.pdf" download>Download Resume (EN)</a>
       </div>
     </div>
-
     <div class="copy">© 2025 Developed by Felipe Torres</div>
   </footer>
 
-  <!-- Back to top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">⭡</button>
 
   <script src="script.js"></script>
 
-  <!-- ====== Project Modal (id/estrutura idênticos ao PT) ====== -->
   <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="project-modal__backdrop" data-close-modal></div>
-
     <div class="project-modal__dialog" role="document" aria-labelledby="projectModalTitle" aria-describedby="projectModalDesc">
       <button class="project-modal__close" aria-label="Close" data-close-modal>×</button>
-
       <div class="project-modal__media">
         <img id="projectModalImg" alt="" />
       </div>
-
       <div class="project-modal__body">
         <h3 id="projectModalTitle"></h3>
         <p id="projectModalDesc" class="project-modal__text"></p>
-
-        <!-- Ordem garantida via CSS: GitHub (esquerda), Site (direita) -->
         <div class="project-modal__actions">
           <a id="projectModalGithub" class="btn primary" target="_blank" rel="noopener">View on GitHub</a>
           <a id="projectModalSite" class="btn ghost" target="_blank" rel="noopener">View site</a>
@@ -230,5 +290,15 @@
       </div>
     </div>
   </div>
+
+  <div class="diploma-modal" id="diplomaModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="diploma-modal__backdrop" data-close-diploma-modal></div>
+    <div class="diploma-modal__dialog" role="document">
+      <button class="diploma-modal__close" aria-label="Fechar" data-close-diploma-modal>×</button>
+      <div class="diploma-modal__content">
+        </div>
+    </div>
+  </div>
+
 </body>
 </html>
