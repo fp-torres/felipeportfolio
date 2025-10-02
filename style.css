@@ -112,9 +112,18 @@ a{ color:inherit; text-decoration:none }
   justify-content:center; max-width: 900px; margin: 0 auto;
 }
 .avatar{
-  width: 260px; height: 260px; object-fit:cover;
-  border-radius: 16px; border:1px solid rgba(255,255,255,.15);
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.15);
   box-shadow: 0 20px 40px rgba(0,0,0,.35);
+  transition: all .3s ease; /* LINHA ADICIONADA */
+}
+.avatar:hover {
+  transform: translateY(-5px) scale(1.02); /* Efeito de "saltar" */
+  border-color: var(--primary); /* Borda fica amarela */
+  box-shadow: 0 30px 50px rgba(0,0,0,.4), 0 0 40px -5px var(--ring); /* Sombra mais forte e brilho amarelo */
 }
 .about-text{ max-width: 520px; }
 .about-text h1{ margin:0 0 12px; font-size: clamp(1.8rem, 1.2rem + 1.8vw, 2.6rem); text-align: left; }
@@ -173,28 +182,55 @@ a{ color:inherit; text-decoration:none }
 
 /* ========= Tools grid ========= */
 .tools-grid{
-  display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  display:grid; 
+  gap:14px; 
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 }
-.tool-card{
+.tool-card {
   position: relative;
-  border:1px solid rgba(148,163,184,.2);
-  background: linear-gradient(160deg, rgba(255,255,255,.03), rgba(255,255,255,0));
-  border-radius:24px; padding:18px 16px; min-height:170px;
-  display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end;
-  transition: all .2s ease;
-  outline:none;
+  border: 1px solid rgba(148,163,184,.2);
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 18px 16px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  transition: all .3s ease;
+  outline: none;
 }
-.tool-card i{ font-size:42px; margin-bottom:auto }
-.tool-name{ font-weight:700; margin-top:8px }
-.tool-years{ color: var(--muted); font-size:.95rem }
+.tool-card i {
+  font-size: 42px;
+  margin-bottom: auto;
+  transition: all .3s ease;
+}
+.tool-name { 
+  font-weight: 700; 
+  margin-top: 8px;
+}
+.tool-years { 
+  color: var(--muted); 
+  font-size: .95rem;
+}
 
-.tool-card:hover, .tool-card:focus{
-  transform: translateY(-3px) scale(1.01);
-  border-color: rgba(255, 209, 0, .45);
+/* EFEITO :hover ATUALIZADO */
+.tool-card:hover, .tool-card:focus {
+  transform: translateY(-4px);
+  border-color: rgba(148, 163, 184, .3);
   box-shadow: 0 16px 36px rgba(0,0,0,.35);
-  background: linear-gradient(160deg, rgba(255,255,255,.09), rgba(255,255,255,.02));
+  /* 1. Fundo volta a ser o gradiente escuro */
+  background: linear-gradient(160deg, rgba(255,255,255,.05), transparent);
 }
 
+/* Ícone ganha destaque no :hover */
+.tool-card:hover i, .tool-card:focus i {
+  transform: scale(1.1);
+  /* 2. Brilho do ícone alterado para branco */
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+}
+
+/* Estilos do Tooltip (sem alterações) */
 .tool-card::before, .tool-card::after {
   position: absolute;
   left: 50%;
@@ -230,7 +266,7 @@ a{ color:inherit; text-decoration:none }
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(-5px);
-  transition-delay: 0s;
+  transition-delay: .2s;
 }
 
 /* ========= Formação, Experiência e Certificações ========= */
